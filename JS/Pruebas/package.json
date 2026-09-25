@@ -1,0 +1,12 @@
+{
+  "name": "pruebas-unitarias-jest",
+  "version": "1.0.0",
+  "description": "Pruebas unitarias básicas con Jest",
+  "main": "funciones.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^30.5.0"
+  }
+}

@@ -1,0 +1,28 @@
+.pagina{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+
+    grid-template-areas: 
+        "header header"
+        "menu contenido"
+        "footer footer";
+}
+
+header{
+    grid-area:header;
+}
+aside {
+    grid-area: menu;
+}
+
+main{
+    grid-area: contenido;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.item{
+    border: 2px solid palevioletred;
+}
