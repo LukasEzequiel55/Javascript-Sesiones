@@ -1,0 +1,20 @@
+package com.generation.ecommerce;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController // controlador que procesa solicitudes HTTP
+@RequestMapping(path = "/ecommerce/hola/") //Define un endpoint o ruta a la que la api le solicita datos especificos
+public class HolaMundo {
+    @GetMapping // Define que el metodo saludar puede responder a solicitures HTTP de tipo GET
+public String saludar(){
+    return "<h1> Hola Mundo! Desde Spring Boot</h1>";
+}//Saludar
+    //Ejemplo de solicitud http://localhost:8080/ecommerce/hola/{nombre}
+    @GetMapping("{nombre}")// Indica que {nombre} es un valor que puede cambiar dentro del endpoint /ecommerce/hola
+    public String saludarUsuario(@PathVariable String nombre){ // el parametro nombre es el valor que cambia
+        return "<h1> Hola, " + nombre +"! </h1>";
+    }//saludarUsuario
+}// class HolaMundo

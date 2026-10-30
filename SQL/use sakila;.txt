@@ -1,0 +1,59 @@
+use sakila;
+-- reto 1
+select * from film where length > 120;
+
+select customer_id from rental where staff_id = 1;
+
+select * from actor where last_name <> 'SMITH';
+
+select * from film where rating = 'PG' or 'P';
+
+select customer_id from rental where year(rental_date) <= 2006;
+
+select * from film where length > 100 and rating = 'PG-13'; 
+
+-- segundo reto
+
+select * from category;
+
+select distinct staff_id from rental;
+
+select distinct rental_rate, length from film;
+
+select distinct payment_id, rental_id from payment;
+
+-- tercer reto
+
+select * from actor where first_name like 'J%';
+
+select * from film where title like '%DAY';
+
+select * from customer where last_name like '%SON%';
+
+select * from actor where first_name like '_____';
+
+select * from film where title like 'C%' and title like '%LOVE%';
+
+-- cuarto reto
+
+select title, length, rating from film order by rating asc, length desc;
+
+select first_name, last_name, create_date from customer order by create_date desc, last_update asc;
+
+select first_name, last_name from actor order by last_name desc, first_name asc;
+
+select customer_id, amount, payment_date from payment order by customer_id asc, amount desc, payment_date asc, amount asc;
+
+-- quinto reto
+
+select title, length from film order by length asc limit 10;
+
+select title from film where title like '%LOVE%';
+
+select title from film where rating in ('PG', 'PG-13') and length between 90 and 120;
+
+select title from film where rating in ('PG-13') order by length desc limit 5;
+
+select distinct first_name from customer order by first_name asc;
+
+select * from address where address2 is null;
